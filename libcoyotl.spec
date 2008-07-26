@@ -62,6 +62,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/lib*.la
 %dir %{_includedir}/%{name}
 %{_includedir}/%{name}/*.h
+%dir %{_docdir}/%{name}
 %dir %{_docdir}/%{name}/api/
 %{_docdir}/%{name}/api/*
 
