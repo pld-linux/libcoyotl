@@ -8,6 +8,7 @@ URL:		http://www.coyotegulch.com/products/libcoyotl/index.html
 Source0:	http://www.coyotegulch.com/distfiles/%{name}-%{version}.tar.gz
 # Source0-md5:	5c1d9cfce494f123f52c399b39925bdb
 Patch0:		%{name}-gcc43.patch
+BuildRequires:	dos2unix
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -34,6 +35,7 @@ libcoyotl static libraries
 
 %prep
 %setup -q
+dos2unix -o libcoyotl/sortutil.h
 %patch -p0
 
 %build
