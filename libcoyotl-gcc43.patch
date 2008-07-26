@@ -1,0 +1,22 @@
+--- libcoyotl/command_line.cpp	2005-10-10 06:48:30.000000000 +0200
++++ ../libcoyotl-3.1.0.new/libcoyotl/command_line.cpp	2008-07-26 22:38:01.000000000 +0200
+@@ -32,6 +32,9 @@
+ //-----------------------------------------------------------------------
+ 
+ #include "command_line.h"
++
++#include <cstring>
++
+ using namespace libcoyotl;
+ 
+ command_line::command_line(int argc, char * argv[], const set<string> & bool_opts)
+--- libcoyotl/sortutil.h	2005-10-10 06:48:30.000000000 +0200
++++ ../libcoyotl-3.1.0.new/libcoyotl/sortutil.h	2008-07-26 22:37:09.000000000 +0200
+@@ -36,6 +36,7 @@
+ #if !defined(LIBCOYOTL_SORTUTIL_H)
+ #define LIBCOYOTL_SORTUTIL_H
+ 
++#include <climits>
+ #include <stdexcept>
+ 
+ namespace libcoyotl
