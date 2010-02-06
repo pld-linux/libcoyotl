@@ -1,7 +1,7 @@
 Summary:	The Coyotl library defies easy classification -- much like it's namesake
 Name:		libcoyotl
 Version:	3.1.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries
 URL:		http://www.coyotegulch.com/products/libcoyotl/index.html
