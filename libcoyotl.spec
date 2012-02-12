@@ -1,16 +1,19 @@
 Summary:	The Coyotl library defies easy classification -- much like it's namesake
 Name:		libcoyotl
 Version:	3.1.0
-Release:	4
+Release:	5
 License:	GPL
 Group:		Libraries
 URL:		http://www.coyotegulch.com/products/libcoyotl/index.html
 Source0:	http://www.coyotegulch.com/distfiles/%{name}-%{version}.tar.gz
 # Source0-md5:	5c1d9cfce494f123f52c399b39925bdb
 Patch0:		%{name}-gcc43.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	dos2unix
 BuildRequires:	libpng-devel
 BuildRequires:	libstdc++-devel
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -41,6 +44,10 @@ dos2unix -o libcoyotl/sortutil.h
 %patch0 -p0
 
 %build
+%{__libtoolize}
+%{__aclocal}
+%{__autoconf}
+%{__automake}
 %configure
 %{__make}
 
