@@ -41,7 +41,7 @@ libcoyotl static libraries
 %prep
 %setup -q
 dos2unix -o libcoyotl/sortutil.h
-%patch0 -p0
+%patch -P0 -p0
 
 %build
 %{__libtoolize}
